@@ -1,0 +1,24 @@
+At the moment the Live_Stock_predictor_1.py file must be ran after the market closes one day, and before it opens the next, to predict the closing prices of the stocks on said next day.
+
+In the future (to make the script more professional (probably not next version)) after making a prediction, it should schedule the actual trade to be bought and sold. It should also calculate how much of the stock to buy based on the return prediction and how large the portfolio is.
+
+When being streamlined, the program should also do more than just print the predicted return of each stock. It should also use those predicted returns along with other data, and use a trading strategy to decide whether to buy or not. This way users won't have to analyze the data themselves and decide whether to buy or not.
+
+The next version of the of the code should implement more features that can be derived from the easily available OHLCV data, like MACD. Future versions should implement a sentiment analysis model to read through news articles or social media to give the model insight into the real world and happenings impacting stock price.
+
+
+The main current problem with the code is how unorganized it is.
+
+There are many different functions written throughout the code that can/should be put into separate files or put into classes. In the next version of the code I should implement more modular coding and make separate files or packages to hold important functions or classes.
+
+Specifically in my dataset_maker_1.py file, there is a lot of copy and pasted code for each ticker. This is not space efficient, or optimal if the dataset were to be expanded to more tickers. In the next version I should create a dictionary of the ticker dataframes and iterate over them, such as what I did in the Live_Stock_predictor_1.py file, instead of copying the same code for each ticker.
+
+One inconvenience I ran into throughout each stage of the project was how the dataset was organized. Because I did not plan multiple steps ahead and worked one step at a time, the dataset is remodified in almost every file to fit that files specific purpose. In the next version I should plan ahead and make the dataset in the most optimal format from the beginning from the dataset_maker_1.py file so that the dataset does not need to be completely reengineered at each step.
+
+Although not very important for a relatively small dataset, it is good practice, especially if the dataset were to be expanded significantly, to split the training set up into smaller batches, instead of training on the entire dataset each epoch, to be more computationally efficient. 
+
+In the next version, a loss stop should be implemented to save the models parameters at the lowest loss achieved during training/testing to prevent overfitting.
+
+My backtester.py file tests the model using the AMZN stock for the entire length of the dataset, because the model was not trained on it. Although the model was not trained on that specific data, the model may have remembered general patterns that are common across all of the stocks throughout that period, making the model appear more accurate than it actually is. In the next version, I should separate the training and testing sets temporally, opposed to splitting the dataset by stock.
+
+Predicting the closing value one day ahead without taking things like news sentiment into account opens the door to bad predictions from market sentiment. Trying to predict slightly farther in the future like a week may allow short term movement based on sentiment to average out and become more fitting to a moving average based prediction.
