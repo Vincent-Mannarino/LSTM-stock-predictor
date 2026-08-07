@@ -1,5 +1,0 @@
-The dataset maker, backtester, and the LSTM training and testing files were all used to make the final live stock predictor file, contributing to things such as manipulating data to make the dataset, training and testing the LSTM model, and backtesting the model on historical data. These files are obsolete with the completion of the live stock prediction file and are only present to show the process of how the LSTM model was organized, trained, and tested, along with allowing changes and customization should you want to use this project as a backbone for your own.
-
-The Live_Stock_predictor_1.py file is completely independent of these files and can run without them, only needing the 'LSTM_model_1.pth' file which stores the LSTM parameters. If you simply want to see the finished program giving stock return predictions, simply open Live_Stock_predictor_1.py, enter the tickers that you want predictions for in the 'Ticker' list at the bottom of the file, and run the program.
-
-This project was meant only as an educational experience and is in no way financial advice.
