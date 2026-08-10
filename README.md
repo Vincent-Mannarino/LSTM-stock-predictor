@@ -5,7 +5,7 @@ A hand-built LSTM (written from scratch in PyTorch, without `nn.LSTM`) that pred
 > **Disclaimer:** This project was built purely as an educational exercise in understanding LSTMs, PyTorch, and time-series modeling. It is **not** financial advice, and should not be used to make real investment decisions.
  
 ## App
-    If you would like to run the user friendly UI for this program, visit my other repository [Stock-Prediction-App](https://github.com/Vincent-Mannarino/LStock-Prediction-App) and follow the steps in that repository's README.md file.
+If you would like to run the user friendly UI for this program, visit my other repository [Stock-Prediction-App](https://github.com/Vincent-Mannarino/Stock-Prediction-App) and follow the steps in that repository's README.md file.
 
 ## Quick Start
  
